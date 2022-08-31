@@ -238,8 +238,6 @@ button:hover,
     font-weight: var(--fw-bold);
   }
 
-
-
   .primary-navigation[data-visible] {
     display: block;
   }
@@ -265,6 +263,31 @@ button:hover,
   position: fixed;
 }
 
+/* cta */
+.cta {
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  .cta {
+    text-align: left;
+  }
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('images/bg-tablet-pattern.svg'),
+    url('images/bg-tablet-pattern.svg');
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: -20rem -5rem, 80rem -42em;
+  opacity: 0.1;
+}
+
 
 /* Utility classes */
 
@@ -274,10 +297,6 @@ button:hover,
 
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
-}
-
-:where(.flow :not(:first-child)) {
-  margin-top: var(--flow-spacer, 3em);
 }
 
 .even-columns {
@@ -290,6 +309,25 @@ button:hover,
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
+
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+.vertical-align-center {
+  align-items: center
+}
+
+@media (min-width: 50em) {
+  .justify-self-end-md {
+    justify-self: end;
+  }
+}
+
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, 3em);
 }
 
 .visually-hidden {
