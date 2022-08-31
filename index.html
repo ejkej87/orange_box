@@ -18,7 +18,11 @@
   <header class="primary-header">
     <div class="container">
       <div class="nav-wrapper">
-      <a href=""><img src="./images/logo.svg" alt="Logo"></a>
+        <a href="" aria-label="home">
+          <svg class="logo" width="146" height="24">
+            <use xlink:href="images/logo.svg#logo"></use>
+          </svg>
+        </a>
       <button class="mobile-nav-toggle" aria-controls="primary-avigation" aria-expanded="false">
         <img class="icon-close" src="./images/icon-close.svg" alt="" aria-hidden="true">
         <img class="icon-hamburger" src="./images/icon-hamburger.svg" alt="" aria-hidden="true">
@@ -126,13 +130,15 @@
     </section>
   </main>
 
-  <footer class="padding-block-700 bg-neutral-900 text-neutral-100">
+  <footer class="primary-footer padding-block-700 bg-neutral-900 text-neutral-100">
     <div class="container">
-      <div class="even-columns"> 
-        <div>
-          <svg class="logo">
-            <use xlink:href="images/logo.svg#logo"></use>
-          </svg>
+      <div class="primary-footer-wrapper"> 
+        <div class="primary-footer-logo-social">
+          <a href="" aria-label="home">
+            <svg class="logo" width="146" height="24">
+              <use xlink:href="images/logo.svg#logo"></use>
+            </svg>
+          </a>
           <ul class="social-list" role="list" aria-label="social-links">
             <li><a aria-label="facebook" href="#">
               <svg class="social-icon">
@@ -161,7 +167,7 @@
             </a></li>
           </ul>
         </div>
-        <div>
+        <div class="primary-footer-nav">
           <nav class="footer-nav" aria-label="footer">
             <ul class="flow" aria-laber="Footer" role="list">
               <li><a href="">Home</a></li>
@@ -174,10 +180,10 @@
             </ul>
           </nav>
         </div>
-        <div>
+        <div class="primary-footer-form">
           <form action="">
             <input type="email" placeholder="">
-            <button class="button">Go</button>
+            <button class="button" data-shadow="none">Go</button>
           </form>
           <p>Copy 2022. All Rights eserved</p>
         </div>
